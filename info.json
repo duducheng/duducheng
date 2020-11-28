@@ -1,0 +1,7 @@
+{
+    "bio": "I focus on medical image analysis, 3D computer vision and truthworthy artificial intelligence. I have (co-)first-authored 10+ papers on prestigious venues, e.g., Cancer Research, EBioMedicine, CVPR, MICCAI, NeurIPS, one of which was selected as cover article. I served as reviewers for top venues, and I was awarded BMVC Outstanding Reviewer. As participants, I top-ranked in several AI competitions; As lead organizer, I hosted MICCAI 2020 RibFrac Challenge.",
+    "preprint": ["MedMNIST/MedMNIST", "M3DV/ACSConv", "M3DV/RibFrac-Challenge"],
+    "pub": ["M3DV/FracNet", "TrustworthyDL/LeBA", "M3DV/SimTA", "M3DV/AlignShift", "duducheng/DenseSharp"],
+    "edu": ["M3DV/Kickstart", "duducheng/2048-api", "duducheng/clustering_tutorial"],
+    "misc": ["M3DV/ai-deadlines", "duducheng/Learning-Notes", "duducheng/deeplabv3p_gluon"]
+}
