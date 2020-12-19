@@ -1,5 +1,5 @@
 # Bio.
-I focus on medical image analysis, 3D computer vision and truthworthy machine learning. I design methodology to solve fundamental issues in healthcare AI, and I explore clinical science to facilitate precision medicine and stratified healthcare (especially for lung cancer). I am also interested in understanding 3D geometry and social aspects of AI. I develop open-source software, data and benchmarks, and I was the lead organizer for MICCAI 2020 RibFrac Challenge.
+I focus on medical image analysis, 3D computer vision and truthworthy machine learning, with a clinical emphasis on lung cancer and thoracic diseases. I have (co-)first-authored 10+ papers on top journals / conferences, e.g., Cancer Research, EBioMedicine, CVPR, MICCAI and NeurIPS. I was a reviewer for 10+ prestigious venues, a top-ranking participant for several AI competitions, and the lead organizer for MICCAI 2020 RibFrac Challenge.
 
 ## Research Projects
 ### Preprint / Technical Reports
