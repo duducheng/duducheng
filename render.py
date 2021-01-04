@@ -10,7 +10,7 @@ Repo = namedtuple("Repo", ["name", "description",
 
 
 def parse_repo(repo_name: str) -> Repo:
-    print("Parsing {}...".format(repo_name))
+    print("Parsing {}...".format(repo_name), end=",")
     api = "https://api.github.com/repos/"
     parsed_json = json.loads(urllib.request.urlopen(api+repo_name).read())
     repo = Repo(name=parsed_json["full_name"],
@@ -18,6 +18,7 @@ def parse_repo(repo_name: str) -> Repo:
                 stars=parsed_json["stargazers_count"],
                 forks=parsed_json["forks_count"],
                 open_issues=parsed_json["open_issues_count"])
+    print("Stars:", repo.stars)
     return repo
 
 

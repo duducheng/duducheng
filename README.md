@@ -1,5 +1,5 @@
 # Bio.
-I focus on medical image analysis, 3D computer vision and truthworthy artificial intelligence. I have (co-)first-authored 10+ papers on prestigious venues, e.g., Cancer Research, EBioMedicine, CVPR, MICCAI, NeurIPS, one of which was selected as cover article. I served as reviewers for top venues, and I was awarded BMVC Outstanding Reviewer. As participants, I top-ranked in several AI competitions; As lead organizer, I hosted MICCAI 2020 RibFrac Challenge.
+I focus on medical image analysis, 3D computer vision and truthworthy machine learning, with a clinical emphasis on lung cancer and thoracic diseases. I have (co-)first-authored 10+ papers on top journals / conferences, e.g., Cancer Research, EBioMedicine, CVPR, MICCAI and NeurIPS. I was a reviewer for 10+ prestigious venues, a top-ranking participant for several AI competitions, and the lead organizer for MICCAI 2020 RibFrac Challenge.
 
 ## Research Projects
 ### Preprint / Technical Reports
