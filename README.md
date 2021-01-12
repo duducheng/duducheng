@@ -3,11 +3,11 @@ I focus on medical image analysis, 3D computer vision and truthworthy machine le
 
 ## Research Projects
 ### Preprint / Technical Reports
-* [MedMNIST/MedMNIST](https://github.com/MedMNIST/MedMNIST): MedMNIST Classification Decathlon: A Lightweight AutoML Benchmark for Medical Image Analysis ![#stars](https://img.shields.io/github/stars/MedMNIST/MedMNIST) ![#forks](https://img.shields.io/github/forks/MedMNIST/MedMNIST)
-* [M3DV/ACSConv](https://github.com/M3DV/ACSConv): Reinventing 2D Convolutions for 3D Images ![#stars](https://img.shields.io/github/stars/M3DV/ACSConv) ![#forks](https://img.shields.io/github/forks/M3DV/ACSConv)
 * [M3DV/RibFrac-Challenge](https://github.com/M3DV/RibFrac-Challenge): MICCAI 2020 RibFrac Challenge: Rib Fracture Detection and Classification ![#stars](https://img.shields.io/github/stars/M3DV/RibFrac-Challenge) ![#forks](https://img.shields.io/github/forks/M3DV/RibFrac-Challenge)
 
 ### Publications
+* [MedMNIST/MedMNIST](https://github.com/MedMNIST/MedMNIST): [ISBI'21] MedMNIST Classification Decathlon: A Lightweight AutoML Benchmark for Medical Image Analysis ![#stars](https://img.shields.io/github/stars/MedMNIST/MedMNIST) ![#forks](https://img.shields.io/github/forks/MedMNIST/MedMNIST)
+* [M3DV/ACSConv](https://github.com/M3DV/ACSConv): [IEEE JBHI] Reinventing 2D Convolutions for 3D Images ![#stars](https://img.shields.io/github/stars/M3DV/ACSConv) ![#forks](https://img.shields.io/github/forks/M3DV/ACSConv)
 * [M3DV/FracNet](https://github.com/M3DV/FracNet): [EBioMedicine] Deep-learning-assisted detection and segmentation of rib fractures from CT scans: Development and validation of FracNet ![#stars](https://img.shields.io/github/stars/M3DV/FracNet) ![#forks](https://img.shields.io/github/forks/M3DV/FracNet)
 * [TrustworthyDL/LeBA](https://github.com/TrustworthyDL/LeBA): [NeurIPS'20] Learning Black-Box Attackers with Transferable Priors and Query Feedback ![#stars](https://img.shields.io/github/stars/TrustworthyDL/LeBA) ![#forks](https://img.shields.io/github/forks/TrustworthyDL/LeBA)
 * [M3DV/SimTA](https://github.com/M3DV/SimTA): [MICCAI'20] MIA-Prognosis: A Deep Learning Framework to Predict Therapy Response ![#stars](https://img.shields.io/github/stars/M3DV/SimTA) ![#forks](https://img.shields.io/github/forks/M3DV/SimTA)
