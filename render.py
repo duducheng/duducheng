@@ -11,7 +11,7 @@ Repo = namedtuple("Repo", ["name", "description",
 
 
 def parse_repo(repo_name: str) -> Repo:
-    print("Parsing {}...".format(repo_name), end=",")
+    print("Parsing {}...".format(repo_name), end="")
     api = "https://api.github.com/repos/"
     parsed_json = json.loads(urllib.request.urlopen(api+repo_name).read())
     repo = Repo(name=parsed_json["full_name"],
@@ -24,8 +24,8 @@ def parse_repo(repo_name: str) -> Repo:
 
 
 def repo_to_line(repo: Repo) -> str:
-    line_template = "* [{0}](https://github.com/{0}): {1} ![#stars](https://img.shields.io/github/stars/{0}) ![#forks](https://img.shields.io/github/forks/{0})"
-    return line_template.format(repo.name, repo.description)
+    line_template = "* [{0}](https://github.com/{0}): {1} ![#stars:{2:d}](https://img.shields.io/github/stars/{0}) ![#forks:{3:d}](https://img.shields.io/github/forks/{0})"
+    return line_template.format(repo.name, repo.description, repo.stars, repo.forks)
 
 
 def parse_repo_block(header: str, repo_names: list) -> tuple:
