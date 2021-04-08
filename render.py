@@ -4,6 +4,7 @@
 import json
 import urllib.request
 from collections import namedtuple
+import datetime
 
 Repo = namedtuple("Repo", ["name", "description",
                            "stars", "forks", "open_issues"])
@@ -43,7 +44,7 @@ def parse_repo_block(header: str, repo_names: list) -> tuple:
     return ("", 0, 0)
 
 
-def main(info_path: str, template_path: str, output_path: str = None):
+def main(info_path: str, template_path: str, output_path: str = None, write_summary: bool = True):
     with open(info_path) as f:
         info = json.load(f)
     with open(template_path) as f:
@@ -67,7 +68,11 @@ def main(info_path: str, template_path: str, output_path: str = None):
     total_forks = sum([preprint[2], pub[2], edu[2], misc[2]])
     print("Total Stars: ", total_stars)
     print("Total Forks: ", total_forks)
-
+    
+    if write_summary:
+        output += "\n\nTotal Stars: {0:d}. Total Forks: {1:d}. Updated on {2:s}.".format(
+            total_stars, total_forks, datetime.date.today().strftime("%B %d, %Y"))
+        
     if output_path is not None:
         with open(output_path, "w") as f:
             f.write(output)

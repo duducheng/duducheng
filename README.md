@@ -1,5 +1,5 @@
 # Bio.
-I focus on medical image analysis, 3D computer vision and trustworthy machine learning, with a clinical emphasis on lung cancer and thoracic diseases. I have (co-)first-authored 10+ papers on top journals / conferences, e.g., Cancer Research, EBioMedicine, CVPR, MICCAI and NeurIPS. I was a reviewer for 10+ prestigious venues, a top-ranking participant for several AI competitions, and the lead organizer for MICCAI 2020 RibFrac Challenge.
+I focus on medical image analysis, 3D computer vision and trustworthy machine learning, with a clinical emphasis on lung cancer and thoracic diseases. I have (co-)first-authored 10+ papers on top-tier journals / conferences, e.g., Cancer Research, CVPR, MICCAI and NeurIPS. I was a reviewer for 10+ prestigious venues, a top-ranking participant for several AI competitions, and the lead organizer for MICCAI 2020 RibFrac Challenge.
 
 ## Research Projects
 ### Preprint / Technical Reports
@@ -23,3 +23,5 @@ I focus on medical image analysis, 3D computer vision and trustworthy machine le
 * [M3DV/ai-deadlines](https://github.com/M3DV/ai-deadlines): :alarm_clock: top AI deadline countdowns (with an emphasis on computer vision and medical images) ![#stars](https://img.shields.io/github/stars/M3DV/ai-deadlines) ![#forks](https://img.shields.io/github/forks/M3DV/ai-deadlines)
 * [duducheng/Learning-Notes](https://github.com/duducheng/Learning-Notes): Notes and resources on Machine Learning ![#stars](https://img.shields.io/github/stars/duducheng/Learning-Notes) ![#forks](https://img.shields.io/github/forks/duducheng/Learning-Notes)
 * [duducheng/deeplabv3p_gluon](https://github.com/duducheng/deeplabv3p_gluon): DeepLab v3+ in MXNet Gluon ![#stars](https://img.shields.io/github/stars/duducheng/deeplabv3p_gluon) ![#forks](https://img.shields.io/github/forks/duducheng/deeplabv3p_gluon)
+
+Total Stars: 896. Total Forks: 302. Updated on April 08, 2021.
