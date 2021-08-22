@@ -23,8 +23,13 @@ def parse_repo(repo_name: str) -> Repo:
     return repo
 
 
+# def repo_to_line(repo: Repo) -> str:
+#     line_template = "* [{0}](https://github.com/{0}): {1} ![#stars:{2:d}](https://img.shields.io/github/stars/{0}) ![#forks:{3:d}](https://img.shields.io/github/forks/{0})"
+#     return line_template.format(repo.name, repo.description, repo.stars, repo.forks)
+
+
 def repo_to_line(repo: Repo) -> str:
-    line_template = "* [{0}](https://github.com/{0}): {1} ![#stars:{2:d}](https://img.shields.io/github/stars/{0}) ![#forks:{3:d}](https://img.shields.io/github/forks/{0})"
+    line_template = "* ![#stars:{2:d}](https://img.shields.io/github/stars/{0}) ![#forks:{3:d}](https://img.shields.io/github/forks/{0}) [{0}](https://github.com/{0}): {1} ![#stars:{2:d}](https://img.shields.io/github/stars/{0}) ![#forks:{3:d}](https://img.shields.io/github/forks/{0})"
     return line_template.format(repo.name, repo.description, repo.stars, repo.forks)
 
 
@@ -68,11 +73,11 @@ def main(info_path: str, template_path: str, output_path: str = None, write_summ
     total_forks = sum([preprint[2], pub[2], edu[2], misc[2]])
     print("Total Stars: ", total_stars)
     print("Total Forks: ", total_forks)
-    
+
     if write_summary:
         output += "\n\nTotal Stars: {0:d}. Total Forks: {1:d}. Updated on {2:s}.".format(
             total_stars, total_forks, datetime.date.today().strftime("%B %d, %Y"))
-        
+
     if output_path is not None:
         with open(output_path, "w") as f:
             f.write(output)
