@@ -29,7 +29,7 @@ def parse_repo(repo_name: str) -> Repo:
 
 
 def repo_to_line(repo: Repo) -> str:
-    line_template = "* ![#stars:{2:d}](https://img.shields.io/github/stars/{0}) ![#forks:{3:d}](https://img.shields.io/github/forks/{0}) [{0}](https://github.com/{0}): {1} ![#stars:{2:d}](https://img.shields.io/github/stars/{0}) ![#forks:{3:d}](https://img.shields.io/github/forks/{0})"
+    line_template = "* ![#stars:{2:d}](https://img.shields.io/github/stars/{0}) ![#forks:{3:d}](https://img.shields.io/github/forks/{0}) [{0}](https://github.com/{0}): {1}"
     return line_template.format(repo.name, repo.description, repo.stars, repo.forks)
 
 
