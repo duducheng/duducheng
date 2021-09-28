@@ -5,6 +5,7 @@
     ],
     "pub": [
         "MedMNIST/MedMNIST",
+        "M3DV/RibSeg",
         "M3DV/ACSConv",
         "M3DV/FracNet",
         "TrustworthyDL/LeBA",
