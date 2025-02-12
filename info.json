@@ -1,11 +1,11 @@
 {
     "bio": "Jiancheng (JC) Yang is a researcher at Swiss Federal Institute of Technology Lausanne (EPFL), where he collaborates with <a href='https://scholar.google.ch/citations?user=kzFmAkYAAAAJ'>Prof. Pascal Fua</a> on AI for health and 3D vision. He earned the Bachelor's and PhD degrees at Shanghai Jiao Tong University, and was a visiting research fellow in the <a href='https://vcg.seas.harvard.edu/'>VCG</a> at Harvard University and the <a href='https://www.epfl.ch/labs/cvlab/'>CVLab</a> at EPFL. Moreover, JC co-founded and served as CTO of <a href='https://www.crunchbase.com/organization/dianei'>a medical AI startup</a> in Shanghai, which successfully raised millions of dollars in funding.\n<br>\nJC has authored <u>50+</u> papers in leading journals and conferences, including Cancer Research, eBioMedicine, TMI, MedIA, CVPR, MICCAI and NeurIPS. He serves as an Area Chair for MICCAI 2024 and MIDL 2025, and regularly reviews for top-tier venues. He has also organized several MICCAI challenges and tutorials. His contributions have been recognized, including being listed among the <a href='https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7'>Top 2% Scientists Worldwide</a> and <a href='https://www.forbes.com/profile/yang-jiancheng/'>Forbes 30 Under 30</a>. \n<br>\nAs a personal interest, JC is the initiator and organizer of the HIT Webinar (<a href='https://hit-webinar.github.io/'>hit-webinar.com</a>), a Chinese-language webinar series focusing on healthcare, artificial intelligence, and cutting-edge technology. This fully open, non-profit initiative has hosted <u>80+</u> sessions since its launch in April 2022. ",
     "preprint": [
-        "M3DV/RibFrac-Challenge",
-        "M3DV/LeFusion"
+        "M3DV/RibFrac-Challenge"
     ],
     "pub": [
         "MedMNIST/MedMNIST",
+        "M3DV/LeFusion",
         "M3DV/ACSConv",
         "M3DV/AlignShift",
         "M3DV/pulmonary-tree-repairing",
