@@ -7,15 +7,30 @@
         "HINTLab/CowTalk",
         "HINTLab/Bonnet",
         "HINTLab/DiffAtlas",
-        "HINTLab/LeFusion",
         "HINTLab/RibFrac-Challenge",
+        "HINTLab/LeFusion",
         "HINTLab/ACSConv",
-        "HINTLab/RibSeg"
+        "HINTLab/AlignShift",
+        "HINTLab/pulmonary-tree-repairing",
+        "HINTLab/pulmonary-tree-labeling",
+        "HINTLab/ImPulSe",
+        "HINTLab/NeAR",
+        "HINTLab/RibSeg",
+        "HINTLab/FracNet",
+        "HINTLab/SimTA",
+        "HINTLab/LeBA",
+        "duducheng/DenseSharp"
     ],
     "edu": [
-        "HINTLab/Kickstart"
+        "HINTLab/Kickstart",
+        "duducheng/2048-api",
+        "duducheng/clustering_tutorial"
     ],
-    "misc": [],
+    "misc": [
+        "M3DV/ai-deadlines",
+        "duducheng/Learning-Notes",
+        "duducheng/deeplabv3p_gluon"
+    ],
     "bio_source": "https://jiancheng-yang.com/assets/data/biography.js",
     "description_overrides": {
         "HINTLab/RibFrac-Challenge": "[TMI'25; MICCAI 2020 Challenge] Deep Rib Fracture Instance Segmentation and Classification from CT on the RibFrac Challenge"

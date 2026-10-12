@@ -8,7 +8,7 @@ Sources:
 
 - `bio_source` in `info.json`: the live website's `Web` biography, converted to Markdown without executing JavaScript.
 - The four lists in `info.json`: curated ordering for existing projects. The GitHub API resolves transferred repositories to their canonical names on every run.
-- Only explicitly curated highlights appear. New HINTLab repositories are never automatically added; edit the lists in `info.json` to change the selection. Empty sections are omitted.
+- The selection preserves the original research, educational and miscellaneous projects, with newer published work added. Preprints are omitted. New repositories are not automatically added; edit the lists in `info.json` to update the selection. Empty sections are omitted.
 - `description_overrides`: source-verified descriptions for repositories with missing or outdated metadata. Remove an override when the repository description catches up.
 - Stars and forks: live GitHub API counts, summed once per displayed repository.
 

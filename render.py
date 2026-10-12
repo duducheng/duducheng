@@ -81,7 +81,7 @@ def main(info_path='info.json', template_path='template.md', output_path='README
                 resolved[repo.name] = repo
                 seen.add(key)
         sections[section] = canonical
-    headers = {'pub': '### Research', 'preprint': '### Preprints / Challenges / Technical Reports',
+    headers = {'pub': '### Publications', 'preprint': '### Preprints / Challenges / Technical Reports',
                'edu': '### Educational', 'misc': '## Misc.'}
     blocks = {}
     total_stars = total_forks = 0
