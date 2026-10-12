@@ -1,4 +1,5 @@
-# Bio.
+# Jiancheng (JC) Yang
+
 {bio}
 
 [Homepage](https://jiancheng-yang.com/) · [Health Intelligence Lab](https://github.com/HINTLab)

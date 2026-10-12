@@ -31,8 +31,5 @@
         "duducheng/Learning-Notes",
         "duducheng/deeplabv3p_gluon"
     ],
-    "bio_source": "https://jiancheng-yang.com/assets/data/biography.js",
-    "description_overrides": {
-        "HINTLab/RibFrac-Challenge": "[TMI'25; MICCAI 2020 Challenge] Deep Rib Fracture Instance Segmentation and Classification from CT on the RibFrac Challenge"
-    }
+    "bio_source": "https://jiancheng-yang.com/assets/data/biography.js"
 }
