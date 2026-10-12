@@ -1,82 +1,110 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+"""Refresh the profile from the website bio and public GitHub repositories."""
 
+import datetime
 import json
+import os
+from pathlib import Path
+import re
+import time
+import urllib.error
 import urllib.request
 from collections import namedtuple
-import datetime
 
-Repo = namedtuple("Repo", ["name", "description",
-                           "stars", "forks", "open_issues"])
-
-
-def parse_repo(repo_name: str) -> Repo:
-    print("Parsing {}...".format(repo_name), end=", ")
-    api = "https://api.github.com/repos/"
-    parsed_json = json.loads(urllib.request.urlopen(api+repo_name).read())
-    repo = Repo(name=parsed_json["full_name"],
-                description=parsed_json["description"],
-                stars=parsed_json["stargazers_count"],
-                forks=parsed_json["forks_count"],
-                open_issues=parsed_json["open_issues_count"])
-    print("Stars:", repo.stars, "Forks:", repo.forks)
-    return repo
+Repo = namedtuple('Repo', ['name', 'description', 'stars', 'forks', 'open_issues'])
+API = 'https://api.github.com/'
 
 
-def repo_to_line(repo: Repo) -> str:
-    line_template = "* [{0}](https://github.com/{0}): {1} ![#stars:{2:d}](https://img.shields.io/github/stars/{0}) ![#forks:{3:d}](https://img.shields.io/github/forks/{0})"
-    return line_template.format(repo.name, repo.description, repo.stars, repo.forks)
+def fetch(url):
+    headers = {'User-Agent': 'duducheng-profile-refresh'}
+    # Only GitHub API requests receive the optional token; the website does not.
+    if url.startswith(API) and os.environ.get('GITHUB_TOKEN'):
+        headers['Authorization'] = 'Bearer ' + os.environ['GITHUB_TOKEN']
+    request = urllib.request.Request(url, headers=headers)
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                return response.read().decode('utf-8')
+        except (urllib.error.URLError, TimeoutError):
+            if attempt == 2:
+                raise
+            time.sleep(2 ** attempt)
 
 
-def parse_repo_block(header: str, repo_names: list) -> tuple:
-    if repo_names:
-        stars = 0
-        forks = 0
+def fetch_json(route):
+    return json.loads(fetch(API + route))
+
+
+def parse_repo(repo_name):
+    data = fetch_json('repos/' + repo_name)
+    if data['private']:
+        raise ValueError('Refusing to include private repository: ' + repo_name)
+    return Repo(data['full_name'], data['description'] or '',
+                data['stargazers_count'], data['forks_count'], data['open_issues_count'])
+
+
+def website_bio(url):
+    source = fetch(url)
+    match = re.search(r'[\"\']Web[\"\']\s*:\s*`([^`]*)`', source, re.MULTILINE)
+    if not match or not match.group(1).strip():
+        raise ValueError('Website Web biography missing; README was not changed')
+    bio = re.sub(r'<a\s+href=[\"\']([^\"\']+)[\"\']>(.*?)</a>',
+                 r'[\2](\1)', match.group(1).strip(), flags=re.DOTALL)
+    bio = re.sub(r'<br\s*/?>', '\n\n', bio)
+    bio = re.sub(r'</?(?:u|b|strong|em)>', '', bio)
+    return '\n\n'.join(' '.join(part.split()) for part in bio.split('\n\n') if part.strip())
+
+
+def repo_to_line(repo):
+    description = ' '.join((repo.description or repo.name.split('/')[-1]).split())
+    return (f'* [{repo.name}](https://github.com/{repo.name}): {description} '
+            f'![stars: {repo.stars}](https://img.shields.io/github/stars/{repo.name}) '
+            f'![forks: {repo.forks}](https://img.shields.io/github/forks/{repo.name})')
+
+
+def main(info_path='info.json', template_path='template.md', output_path='README.md', write_summary=True):
+    info = json.loads(Path(info_path).read_text())
+    template = Path(template_path).read_text()
+    bio = website_bio(info['bio_source'])
+    sections = {key: list(info[key]) for key in ('pub', 'preprint', 'edu', 'misc')}
+    excluded = {name.lower() for name in info.get('exclude_repos', [])}
+    # Resolving through the API follows transfers and writes canonical owner/name.
+    resolved = {}
+    seen = set()
+    for section, names in sections.items():
+        canonical = []
+        for name in names:
+            repo = parse_repo(name)
+            key = repo.name.lower()
+            if key not in seen and key not in excluded:
+                canonical.append(repo.name)
+                resolved[repo.name] = repo
+                seen.add(key)
+        sections[section] = canonical
+    headers = {'pub': '### Research', 'preprint': '### Preprints / Challenges / Technical Reports',
+               'edu': '### Educational', 'misc': '## Misc.'}
+    blocks = {}
+    total_stars = total_forks = 0
+    for section, names in sections.items():
         lines = []
-        for repo_name in repo_names:
-            repo = parse_repo(repo_name)
+        for name in names:
+            repo = resolved[name]
+            repo = repo._replace(description=info.get('description_overrides', {}).get(name, repo.description))
             lines.append(repo_to_line(repo))
-            stars += repo.stars
-            forks += repo.forks
-            if repo.open_issues > 0:
-                print("[Warning!] There is open issues: ", repo)
-        return (header + "\n" + "\n".join(lines), stars, forks)
-    return ("", 0, 0)
-
-
-def main(info_path: str, template_path: str, output_path: str = None, write_summary: bool = True):
-    with open(info_path) as f:
-        info = json.load(f)
-    with open(template_path) as f:
-        template = f.read()
-
-    bio = info["bio"]
-    preprint = parse_repo_block("### Preprint / Technical Reports",
-                                info["preprint"])
-    pub = parse_repo_block("### Publications", info["pub"])
-    edu = parse_repo_block("## Educational Projects", info["edu"])
-    misc = parse_repo_block("## Misc.", info["misc"])
-
-    output = template.format(bio=bio,
-                             preprint=preprint[0],
-                             pub=pub[0],
-                             edu=edu[0],
-                             misc=misc[0])
-    # print(output)
-
-    total_stars = sum([preprint[1], pub[1], edu[1], misc[1]])
-    total_forks = sum([preprint[2], pub[2], edu[2], misc[2]])
-    print("Total Stars: ", total_stars)
-    print("Total Forks: ", total_forks)
-
+            total_stars += repo.stars
+            total_forks += repo.forks
+            print(f'{name}: {repo.stars} stars, {repo.forks} forks')
+        blocks[section] = headers[section] + '\n\n' + '\n'.join(lines) if lines else ''
+    output = re.sub(r'\n{3,}', '\n\n', template.format(bio=bio, **blocks)).rstrip()
     if write_summary:
-        output += "\n\nTotal Stars: {0:d}. Total Forks: {1:d}. Updated on {2:s}.".format(
-            total_stars, total_forks, datetime.date.today().strftime("%B %d, %Y"))
-
+        output += (f'\n\nTotal Stars: {total_stars}. Total Forks: {total_forks}. '
+                   f'Updated on {datetime.datetime.now(datetime.timezone.utc):%B %d, %Y}.')
+    # All sources must succeed before replacing the previous README.
     if output_path is not None:
-        with open(output_path, "w") as f:
-            f.write(output)
+        Path(output_path).write_text(output + '\n')
+    return output
 
 
-if __name__ == "__main__":
-    main("info.json", "template.md", "README.md", write_summary=True)
+if __name__ == '__main__':
+    root = Path(__file__).resolve().parent
+    main(root / 'info.json', root / 'template.md', root / 'README.md')
