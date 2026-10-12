@@ -3,6 +3,8 @@
 `README.md` is generated. Run `python3 render.py` (Python standard library only),
 or use **Actions → Refresh profile README → Run workflow**. GitHub Actions also
 refreshes it every Monday at 06:23 UTC and after generator/config changes.
+When the README changes, Actions commits and pushes it to `master`; it does not
+create releases or tags. Running `render.py` locally only regenerates the file.
 
 Sources:
 

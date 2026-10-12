@@ -31,7 +31,7 @@ class RefreshTests(unittest.TestCase):
             self.assertIn('Total Stars: 5. Total Forks: 2.', output)
             self.assertIn('<details>\n<summary>Total Stars:', output)
             self.assertNotIn('<details open', output)
-            self.assertIn('(Automatically refreshed by GitHub Actions.)</summary>', output)
+            self.assertIn('Refreshed by GitHub Actions on ', output)
             self.assertIn('### Research', output)
             self.assertNotIn('### Publications', output)
             self.assertLess(output.index('</summary>'), output.index('* [HINTLab/Project]'))

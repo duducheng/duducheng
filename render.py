@@ -98,8 +98,7 @@ def main(info_path='info.json', template_path='template.md', output_path='README
     summary = 'View projects'
     if write_summary:
         summary = (f'Total Stars: {total_stars}. Total Forks: {total_forks}. '
-                   f'Updated on {datetime.datetime.now(datetime.timezone.utc):%B %d, %Y}. '
-                   '(Automatically refreshed by GitHub Actions.)')
+                   f'Refreshed by GitHub Actions on {datetime.datetime.now(datetime.timezone.utc):%B %d, %Y}.')
     output = re.sub(r'\n{3,}', '\n\n', template.format(bio=bio, summary=summary, **blocks)).rstrip()
     # All sources must succeed before replacing the previous README.
     if output_path is not None:
