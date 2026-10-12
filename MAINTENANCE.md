@@ -21,3 +21,7 @@ Run `python3 -m unittest discover -s tests` to check transfer deduplication,
 bio conversion and preservation of the README on a source failure.
 GitHub may delay schedules or disable scheduled workflows in inactive public
 repositories; the manual action and local command remain available.
+
+The project list is collapsed by default using GitHub-supported `<details>` /
+`<summary>` HTML. The summary shows aggregate stars, forks, the refresh date, and
+GitHub Actions attribution; expanding it reveals Research, Educational and Misc.

@@ -81,8 +81,8 @@ def main(info_path='info.json', template_path='template.md', output_path='README
                 resolved[repo.name] = repo
                 seen.add(key)
         sections[section] = canonical
-    headers = {'pub': '### Publications', 'preprint': '### Preprints / Challenges / Technical Reports',
-               'edu': '### Educational', 'misc': '## Misc.'}
+    headers = {'pub': '### Research', 'preprint': '### Preprints / Challenges / Technical Reports',
+               'edu': '### Educational', 'misc': '### Misc.'}
     blocks = {}
     total_stars = total_forks = 0
     for section, names in sections.items():
@@ -95,10 +95,12 @@ def main(info_path='info.json', template_path='template.md', output_path='README
             total_forks += repo.forks
             print(f'{name}: {repo.stars} stars, {repo.forks} forks')
         blocks[section] = headers[section] + '\n\n' + '\n'.join(lines) if lines else ''
-    output = re.sub(r'\n{3,}', '\n\n', template.format(bio=bio, **blocks)).rstrip()
+    summary = 'View projects'
     if write_summary:
-        output += (f'\n\nTotal Stars: {total_stars}. Total Forks: {total_forks}. '
-                   f'Updated on {datetime.datetime.now(datetime.timezone.utc):%B %d, %Y}.')
+        summary = (f'Total Stars: {total_stars}. Total Forks: {total_forks}. '
+                   f'Updated on {datetime.datetime.now(datetime.timezone.utc):%B %d, %Y}. '
+                   '(Automatically refreshed by GitHub Actions.)')
+    output = re.sub(r'\n{3,}', '\n\n', template.format(bio=bio, summary=summary, **blocks)).rstrip()
     # All sources must succeed before replacing the previous README.
     if output_path is not None:
         Path(output_path).write_text(output + '\n')
