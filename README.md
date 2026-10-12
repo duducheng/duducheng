@@ -10,7 +10,7 @@ As a personal interest, JC is the initiator and organizer of the HIT Webinar ([h
 ## Highlighted Projects
 
 <details>
-<summary>Total Stars: 2774. Total Forks: 557. Updated on October 12, 2026. (Automatically refreshed by GitHub Actions.)</summary>
+<summary>Total Stars: 2774. Total Forks: 557. Refreshed by GitHub Actions on October 12, 2026.</summary>
 
 ### Research
 
