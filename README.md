@@ -11,16 +11,16 @@ As a personal interest, JC is the initiator and organizer of the HIT Webinar ([h
 ## Highlighted Projects
 
 <details>
-<summary>Total Stars: 2774. Total Forks: 557. Refreshed by GitHub Actions on October 12, 2026.</summary>
+<summary>Total Stars: 2779. Total Forks: 557. Refreshed by GitHub Actions on October 19, 2026.</summary>
 
 ### Research
 
-* [MedMNIST/MedMNIST](https://github.com/MedMNIST/MedMNIST): [pip install medmnist] 18x Standardized Datasets for 2D and 3D Biomedical Image Classification ![stars: 1413](https://img.shields.io/github/stars/MedMNIST/MedMNIST) ![forks: 216](https://img.shields.io/github/forks/MedMNIST/MedMNIST)
+* [MedMNIST/MedMNIST](https://github.com/MedMNIST/MedMNIST): [pip install medmnist] 18x Standardized Datasets for 2D and 3D Biomedical Image Classification ![stars: 1416](https://img.shields.io/github/stars/MedMNIST/MedMNIST) ![forks: 216](https://img.shields.io/github/forks/MedMNIST/MedMNIST)
 * [HINTLab/PhysAssistBench](https://github.com/HINTLab/PhysAssistBench): [EMNLP'26 Findings] Are LLMs Ready to Assist Physicians? PhysAssistBench for Interactive Doctor-Patient-EHR Assistance ![stars: 3](https://img.shields.io/github/stars/HINTLab/PhysAssistBench) ![forks: 0](https://img.shields.io/github/forks/HINTLab/PhysAssistBench)
 * [HINTLab/PlaneCycle](https://github.com/HINTLab/PlaneCycle): [MICCAI'26] PlaneCycle: Training-Free 2D-to-3D Lifting of Foundation Models Without Adapters ![stars: 21](https://img.shields.io/github/stars/HINTLab/PlaneCycle) ![forks: 1](https://img.shields.io/github/forks/HINTLab/PlaneCycle)
 * [HINTLab/CowTalk](https://github.com/HINTLab/CowTalk): [MICCAI'26] Refining 3D Medical Segmentation with Verbal Instruction ![stars: 3](https://img.shields.io/github/stars/HINTLab/CowTalk) ![forks: 2](https://img.shields.io/github/forks/HINTLab/CowTalk)
 * [HINTLab/Bonnet](https://github.com/HINTLab/Bonnet): [ISBI'26 Oral] Bonnet: Ultra-Fast Whole-Body Bone Segmentation from CT Scans ![stars: 10](https://img.shields.io/github/stars/HINTLab/Bonnet) ![forks: 1](https://img.shields.io/github/forks/HINTLab/Bonnet)
-* [HINTLab/DiffAtlas](https://github.com/HINTLab/DiffAtlas): [MICCAI'25 Spotlight] DiffAtlas: GenAI-fying Atlas Segmentation via Image-Mask Diffusion ![stars: 107](https://img.shields.io/github/stars/HINTLab/DiffAtlas) ![forks: 11](https://img.shields.io/github/forks/HINTLab/DiffAtlas)
+* [HINTLab/DiffAtlas](https://github.com/HINTLab/DiffAtlas): [MICCAI'25 Spotlight] DiffAtlas: GenAI-fying Atlas Segmentation via Image-Mask Diffusion ![stars: 108](https://img.shields.io/github/stars/HINTLab/DiffAtlas) ![forks: 11](https://img.shields.io/github/forks/HINTLab/DiffAtlas)
 * [HINTLab/RibFrac-Challenge](https://github.com/HINTLab/RibFrac-Challenge): MICCAI 2020 RibFrac Challenge: Rib Fracture Detection and Classification (3D Instance Segmentation) ![stars: 55](https://img.shields.io/github/stars/HINTLab/RibFrac-Challenge) ![forks: 11](https://img.shields.io/github/forks/HINTLab/RibFrac-Challenge)
 * [HINTLab/LeFusion](https://github.com/HINTLab/LeFusion): [ICLR‘25 Spotlight] LeFusion: Controllable Pathology Synthesis via Lesion-Focused Diffusion Models ![stars: 152](https://img.shields.io/github/stars/HINTLab/LeFusion) ![forks: 8](https://img.shields.io/github/forks/HINTLab/LeFusion)
 * [HINTLab/ACSConv](https://github.com/HINTLab/ACSConv): [IEEE JBHI'21] Reinventing 2D Convolutions for 3D Images - 1 line of code to convert pretrained 2D models to 3D! ![stars: 173](https://img.shields.io/github/stars/HINTLab/ACSConv) ![forks: 19](https://img.shields.io/github/forks/HINTLab/ACSConv)
@@ -32,7 +32,7 @@ As a personal interest, JC is the initiator and organizer of the HIT Webinar ([h
 * [HINTLab/RibSeg](https://github.com/HINTLab/RibSeg): [MICCAI'21 & TMI'23] RibSeg Dataset and Point Cloud Baselines for Rib Segmentation from CT Scans ![stars: 73](https://img.shields.io/github/stars/HINTLab/RibSeg) ![forks: 15](https://img.shields.io/github/forks/HINTLab/RibSeg)
 * [HINTLab/FracNet](https://github.com/HINTLab/FracNet): [eBioMedicine'20] Deep-learning-assisted detection and segmentation of rib fractures from CT scans: Development and validation of FracNet ![stars: 59](https://img.shields.io/github/stars/HINTLab/FracNet) ![forks: 27](https://img.shields.io/github/forks/HINTLab/FracNet)
 * [HINTLab/SimTA](https://github.com/HINTLab/SimTA): [MICCAI'20] MIA-Prognosis: A Deep Learning Framework to Predict Therapy Response ![stars: 10](https://img.shields.io/github/stars/HINTLab/SimTA) ![forks: 2](https://img.shields.io/github/forks/HINTLab/SimTA)
-* [HINTLab/LeBA](https://github.com/HINTLab/LeBA): [NeurIPS'20] Learning Black-Box Attackers with Transferable Priors and Query Feedback ![stars: 34](https://img.shields.io/github/stars/HINTLab/LeBA) ![forks: 6](https://img.shields.io/github/forks/HINTLab/LeBA)
+* [HINTLab/LeBA](https://github.com/HINTLab/LeBA): [NeurIPS'20] Learning Black-Box Attackers with Transferable Priors and Query Feedback ![stars: 35](https://img.shields.io/github/stars/HINTLab/LeBA) ![forks: 6](https://img.shields.io/github/forks/HINTLab/LeBA)
 * [duducheng/DenseSharp](https://github.com/duducheng/DenseSharp): [Cancer Research'18] 3D Deep Learning from CT Scans Predicts Tumor Invasiveness of Subcentimeter Pulmonary Adenocarcinomas ![stars: 118](https://img.shields.io/github/stars/duducheng/DenseSharp) ![forks: 49](https://img.shields.io/github/forks/duducheng/DenseSharp)
 
 ### Educational
