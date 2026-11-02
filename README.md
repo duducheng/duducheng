@@ -11,11 +11,11 @@ As a personal interest, JC is the initiator and organizer of the HIT Webinar ([h
 ## Highlighted Projects
 
 <details>
-<summary>Total Stars: 2776. Total Forks: 557. Refreshed by GitHub Actions on October 26, 2026.</summary>
+<summary>Total Stars: 2777. Total Forks: 558. Refreshed by GitHub Actions on November 02, 2026.</summary>
 
 ### Research
 
-* [MedMNIST/MedMNIST](https://github.com/MedMNIST/MedMNIST): [pip install medmnist] 18x Standardized Datasets for 2D and 3D Biomedical Image Classification ![stars: 1417](https://img.shields.io/github/stars/MedMNIST/MedMNIST) ![forks: 216](https://img.shields.io/github/forks/MedMNIST/MedMNIST)
+* [MedMNIST/MedMNIST](https://github.com/MedMNIST/MedMNIST): [pip install medmnist] 18x Standardized Datasets for 2D and 3D Biomedical Image Classification ![stars: 1418](https://img.shields.io/github/stars/MedMNIST/MedMNIST) ![forks: 217](https://img.shields.io/github/forks/MedMNIST/MedMNIST)
 * [HINTLab/PhysAssistBench](https://github.com/HINTLab/PhysAssistBench): [EMNLP'26 Findings] Are LLMs Ready to Assist Physicians? PhysAssistBench for Interactive Doctor-Patient-EHR Assistance ![stars: 3](https://img.shields.io/github/stars/HINTLab/PhysAssistBench) ![forks: 0](https://img.shields.io/github/forks/HINTLab/PhysAssistBench)
 * [HINTLab/PlaneCycle](https://github.com/HINTLab/PlaneCycle): [MICCAI'26] PlaneCycle: Training-Free 2D-to-3D Lifting of Foundation Models Without Adapters ![stars: 21](https://img.shields.io/github/stars/HINTLab/PlaneCycle) ![forks: 1](https://img.shields.io/github/forks/HINTLab/PlaneCycle)
 * [HINTLab/CowTalk](https://github.com/HINTLab/CowTalk): [MICCAI'26] Refining 3D Medical Segmentation with Verbal Instruction ![stars: 3](https://img.shields.io/github/stars/HINTLab/CowTalk) ![forks: 2](https://img.shields.io/github/forks/HINTLab/CowTalk)
